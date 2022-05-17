@@ -1,0 +1,191 @@
+.header {
+  padding: 57px 0 63px 11px;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    height: 39px;
+    padding: 8px 4px 0 2px;
+    display: flex;
+    align-items: flex-end;
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+    }
+
+    &:hover {
+      opacity: 80%;
+    }
+
+    &:active {
+      opacity: 50%;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    margin: 0 51px 0 auto;
+    align-items: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 45px;
+  }
+
+  &__link {
+    display: block;
+    color: $default;
+    font-size: 18px;
+    line-height: 21px;
+    transition: color 0.5s;
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+    }
+
+    &:hover {
+      color: $orange-500;
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+      color: $default;
+      box-shadow: none;
+    }
+
+    &_active {
+      color: $orange-500;
+    }
+  }
+
+  &__userNav {
+    display: flex;
+    position: relative;
+  }
+
+  &__wrap {
+    margin-right: 13px;
+    position: relative;
+    width: 0px;
+    height: 43px;
+    line-height: 1.5;
+    padding-right: 45px;
+    border-radius: 5px;
+    top: 0;
+    transition: all 0.5s; //что вместо all?
+
+    &:hover {
+      background-color: $orange-500;
+      cursor: pointer;
+
+      ellipse,
+      path {
+        stroke: #FFFFFF;
+      }
+    }
+
+    &.header--active {
+      width: 250px;
+      padding-left: 25px;
+      transition: all 0.5s; //что вместо all?
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+      background-color: #FF7A501A;
+
+      ellipse,
+      path {
+        stroke: black;
+      }
+    }
+  }
+
+  &__input {
+    border: none;
+    background: transparent;
+    width: 0;
+    font-size: 16px;
+    color: $default;
+    transition: all 0.3s;
+    position: relative;
+    display: block;
+    top: 10px;
+
+    &.header--active {
+      width: 98%;
+      padding-left: 5px;
+      transition: all 0.5s 0.8s;
+    }
+
+    &::placeholder {
+      color: $default;
+    }
+  }
+
+  &__search {
+    position: absolute;
+    right: 13px;
+    top: 11px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  &__userLink {
+    position: relative;
+    padding: 12px;
+    bottom: 2px;
+    right: 4px;
+    border-radius: 5px;
+    transition: all 0.5s;
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      background-color: #FF7A501A;
+    }
+
+    &:hover {
+      background-color: $orange-500;
+
+      svg path {
+        stroke: #FFFFFF;
+      }
+
+      span {
+        background-color: #FFFFFF;
+        color: $orange-500;
+      }
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+      color: $default;
+    }
+
+    &:not(:last-child) {
+      margin-right: 33px;
+    }
+  }
+
+  &__img {
+    display: block;
+  }
+
+  &__num {
+    position: absolute;
+    background-color: $orange-500;
+    border-radius: 50%;
+    color: #FFFFFF;
+    font-size: 10px;
+    height: 14px;
+    line-height: 1.4;
+    right: 5px;
+    text-align: center;
+    top: 9px;
+    width: 14px;
+  }
+
+}
